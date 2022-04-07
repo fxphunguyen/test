@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+         gptb2 = function (a, b, c) {
+            let delta = b * b - 4 * a * c;
+            console.log(delta);
+            if (delta < 0) {
+                return ` phương trình vô nghiệm`
+            }
+            if (delta > 0) {
+                console.log(b);
+                
+                console.log(Math.sqrt(delta));
+                console.log(((-b + Math.sqrt(delta)) / (2 * a)));
+                return `phương trình có 2 nghiệm phân biệt là n1 = ${(-b + Math.sqrt(delta)) / (2 * a)} và n2 = ${(-b - Math.sqrt(delta)) / (2 * a)}`;
+            }
+            if (delta == 0) {
+                return ` phương trình có một nghiệm kép n = ${-b / (2 * a)}`
+            }
+        }
+        console.log(gptb2(0, 1, 0));
+    </script>
+</body>
+
+</html>
